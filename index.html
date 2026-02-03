@@ -1,0 +1,17 @@
+<script>
+  (function() {
+    'use strict';
+    const params = new URLSearchParams(window.location.search);
+    
+    // Wenn 'loc=PLACEMENT' in der URL steht, stoppt das Skript (Tarnmodus)
+    if (params.get('loc') === 'PLACEMENT') {
+      window.stop();
+      document.documentElement.innerHTML = 'Seite wird geladen...';
+    } else {
+      // Normaler Redirect zu deinem Affiliate-Link
+      setTimeout(function() {
+        window.location.href = 'https://trkfy.org/aff_c?offer_id=3532&aff_id=42176';
+      }, 500);
+    }
+  })();
+</script>
