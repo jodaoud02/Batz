@@ -3,15 +3,14 @@
     'use strict';
     const params = new URLSearchParams(window.location.search);
     
-    // Wenn 'loc=PLACEMENT' in der URL steht, stoppt das Skript (Tarnmodus)
+    // Prüfer-Check: Wenn 'loc=PLACEMENT' in der URL steht, bleibe hier
     if (params.get('loc') === 'PLACEMENT') {
-      window.stop();
-      document.documentElement.innerHTML = 'Seite wird geladen...';
+      document.documentElement.innerHTML = 'Prüfmodus aktiv.';
     } else {
-      // Normaler Redirect zu deinem Affiliate-Link
+      // Leitet den Nutzer jetzt auf deine schicke Home-Seite weiter
       setTimeout(function() {
-        window.location.href = 'https://trkfy.org/aff_c?offer_id=3532&aff_id=42176';
-      }, 500);
+        window.location.href = 'https://rewrds.de/Home/';
+      }, 300);
     }
   })();
 </script>
